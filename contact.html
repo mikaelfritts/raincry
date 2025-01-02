@@ -8,742 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=SUSE:wght@100..800&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=SUSE:wght@100..800&family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-.suse-rain,body {
-    font-family:SUSE,serif
-}
-.playfair-display-rain,.suse-rain {
-    font-optical-sizing:auto
-}
-.playfair-display-rain,.special-elite-regular,.suse-rain {
-    font-weight:400;
-    font-style:normal
-}
-.list-group-item,.service-card {
-    cursor:pointer
-}
-body {
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-    overflow-x:hidden;
-    margin:0;
-    padding:0;
-    width:100%
-}
-* {
-    box-sizing:border-box
-}
-.container-fluid,.row {
-    margin:0 auto;
-    padding:0
-}
-.content {
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background-color:#edebe7;
-    background-image:repeating-radial-gradient(circle at 0 0,transparent 0,#edebe7 11px),repeating-linear-gradient(rgba(198,185,175,.2),rgba(198,185,175,.2));
-    color:#8a391e
-}
-.content2,.content3 {
-    flex:1;
-    display:flex
-}
-.content2 {
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background-color:#ff780a;
-    background-size:8px 8px;
-    background-image:repeating-linear-gradient(45deg,rgba(236,233,228,.9) 0,rgba(236,233,228,.9) .8px,rgba(255,120,10,.9) 0,rgba(255,120,10,.9) 50%)
-}
-.content3 {
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    border-top:4px solid #000;
-    background-color:#d8d8d8;
-    background-image:linear-gradient(30deg,rgba(252,196,111,.9)12%,transparent 12.5%,transparent 87%,rgba(252,196,111,.9)87.5%,rgba(198,185,175,.9)),linear-gradient(150deg,rgba(252,196,111,.9)12%,transparent 12.5%,transparent 87%,rgba(252,196,111,.9)87.5%,rgba(198,185,175,.9)),linear-gradient(30deg,rgba(252,196,111,.9)12%,transparent 12.5%,transparent 87%,rgba(252,196,111,.9)87.5%,rgba(198,185,175,.9)),linear-gradient(150deg,rgba(252,196,111,.9)12%,transparent 12.5%,transparent 87%,rgba(252,196,111,.9)87.5%,rgba(198,185,175,.9)),linear-gradient(60deg,rgba(252,196,111,.9)25%,transparent 25.5%,transparent 75%,rgba(252,196,111,.9)75%,rgba(198,185,175,.9)),linear-gradient(60deg,rgba(252,196,111,.9)25%,transparent 25.5%,transparent 75%,rgba(252,196,111,.9)75%,rgba(198,185,175,.9));
-    background-size:16px 28px;
-    background-position:0 0,0 0,8px 14px,8px 14px,0 0,8px 14px
-}
-.content4,.content5 {
-    flex:1;
-    text-align:center;
-    border-top:4px solid #000;
-    display:flex
-}
-.content4 {
-    align-items:center;
-    justify-content:center;
-    border-bottom:4px solid #000;
-    background-color:#ceccb9;
-    background-image:radial-gradient(circle at center center,rgba(234,234,234,.9),rgba(248,157,83,.9)),repeating-radial-gradient(circle at center center,rgba(234,234,234,.9),rgba(234,234,234,.9),4px,transparent 8px,transparent 4px);
-    background-blend-mode:multiply
-}
-.content5 {
-    align-items:center;
-    justify-content:center;
-    padding-bottom:4rem;
-    background-color:#f89d53;
-    background-image:linear-gradient(rgba(234,234,234,.5) .8px,transparent .8px),linear-gradient(90deg,rgba(234,234,234,.5) .8px,transparent .8px),linear-gradient(rgba(234,234,234,.5) .4px,transparent .4px),linear-gradient(90deg,#eaeaea .4px,rgba(248,157,83,.5) .4px);
-    background-size:20px 20px,20px 20px,4px 4px,4px 4px;
-    background-position:-.8px -.8px,-.8px -.8px,-.4px -.4px,-.4px -.4px
-}
-.special-elite-regular {
-    font-family:"Special Elite",serif
-}
-#cryaboutiy .content_wrapper,#cryhero h2,.playfair-display-rain {
-    font-family:"Playfair Display",serif
-}
-.navbar-nav {
-    flex:1;
-    display:flex;
-    justify-content:center
-}
-.navbar-toggler i {
-    color:#000;
-    font-size:1.5rem
-}
-.collapse {
-    background-color:rgba(248,157,83,.95);
-    padding:1rem
-}
-.navbar-collapse {
-    text-align:right
-}
-.nav-item {
-    margin-bottom:.5rem;
-    margin-right:10px;
-    font-size:1.3rem
-}
-.brand-subtitle,.brand-title {
-    font-size:2.5rem;
-    font-family:"Special Elite",serif;
-    font-weight:700
-}
-.effect-2 {
-    padding:10px;
-    position:relative;
-    display:inline-block
-}
-.client-login-btn,.contact-btn {
-    height:100%;
-    padding:.5rem;
-    transition:background-color .3s,color .3s
-}
-.effect-2:after,.effect-2:before {
-    content:'';
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    border-style:solid;
-    border-color:#161616;
-    transition:transform .3s
-}
-.effect-2:before {
-    border-width:2px 0;
-    transform:scaleX(0)
-}
-.effect-2:after {
-    border-width:0 2px;
-    transform:scaleY(0)
-}
-.effect-2:hover:after,.effect-2:hover:before {
-    transform:scale(1,1)
-}
-.navbar-brand {
-    color:#161616;
-    display:flex;
-    align-items:center;
-    text-align:left;
-    text-decoration:none
-}
-#cryhero,#cryhero h2,.footer,.philheader,.testimonial-section,.timeline-header {
-    text-align:center
-}
-.navbar-brand:hover {
-    color:#161616
-}
-.brand-logo {
-    height:100%;
-    width:auto
-}
-.brand-title {
-    margin-bottom:-10px
-}
-.brand-subtitle {
-    color:#161616;
-    text-decoration:none
-}
-.contact-section,.contact-section h3,footer {
-    color:#d3cfc7
-}
-.footer,h1.main {
-    font-family:SUSE,serif
-}
-.brand-subtitle:hover {
-    color:#161616;
-    text-decoration:none
-}
-footer {
-    background-color:#8b391e;
-    border-top:2px solid #000
-}
-.client-login-btn {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#d3cfc7;
-    background-color:#161616;
-    border:1px solid #000;
-    font-size:1rem
-}
-.client-login-btn:hover {
-    background-color:#d3cfc7;
-    color:#161616;
-    border:1px solid #161616
-}
-.mainContent {
-    font-size:2rem
-}
-.typey {
-    border-right:.05em solid;
-    animation:1s steps(1) infinite caret
-}
-.navbar-toggler {
-    border-color:#d3cfc7
-}
-.navbar-toggler-icon {
-    background-image:url("data:image/svg+xml;
-    charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
-}
-@keyframes caret {
-    50% {
-        border-color:transparent
-    }
-}
-.contact-section {
-    background-color:#fc882a;
-    background-image:repeating-radial-gradient(circle at 0 0,transparent 0,rgba(252,136,42,.3) 4px),repeating-linear-gradient(rgba(234,234,234,.3),rgba(234,234,234,.3));
-    border-top:5px solid #000;
-    border-bottom:5px solid #000
-}
-.content-text {
-    font-size:1.2rem;
-    color:#fff;
-    text-shadow:1px 2px 2px #000
-}
-.contact-btn {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    background-color:#000;
-    border:1px solid #f89d53;
-    font-size:1rem
-}
-.footer,.phil-btn {
-    background-color:#f89d53
-}
-.contact-link,.footer-social a {
-    text-decoration:none;
-    transition:color .3s
-}
-.contact-btn:hover {
-    background-color:#fff;
-    color:#000;
-    border:1px solid #f89d53
-}
-.contact-link {
-    color:#fff;
-    font-size:1.3rem
-}
-.contact-link:hover {
-    color:#d3cfc7;
-    text-decoration:underline;
-    font-size:1.3rem
-}
-.google-map {
-    border-top:2px solid #8b391e
-}
-.form-label,h2.contact {
-    color:#fff;
-    text-shadow:1px 1px 2px #000
-}
-#cryhero {
-    padding:120px 0
-}
-#cryhero h2 {
-    color:#fff;
-    font-size:5.2em;
-    line-height:140%
-}
-@media(max-width:700px) {
-    #cryhero h2 {
-        font-size:3.5em
-    }
-}
-#cryaboutiy .stamp {
-    position:absolute;
-    left:50%;
-    margin-left:-95px;
-    margin-top:-95px
-}
-#cryaboutiy .content_wrapper {
-    color:#1c2f44;
-    font-size:2.45em;
-    font-weight:200;
-    padding-top:160px;
-    padding-bottom:120px;
-    text-align:center;
-    width:80%
-}
-.shadow-text {
-    font-size:3rem;
-    font-weight:700;
-    color:#000;
-    text-shadow:1px 1px 2px #fff
-}
-.footer {
-    padding:20px;
-    border-top:2px solid #000
-}
-.footer-content {
-    max-width:800px;
-    margin:0 auto
-}
-.footer-logo {
-    width:100px;
-    margin-bottom:10px
-}
-.footer-email {
-    color:#000;
-    font-size:18px;
-    margin:5px 0;
-    font-weight:700
-}
-.footer-social {
-    margin:10px 0
-}
-.footer-social a {
-    color:#000;
-    font-size:24px;
-    margin:0 10px
-}
-.footer-social a:hover {
-    color:#fff
-}
-.footer-copyright {
-    color:#161616;
-    font-size:16px;
-    margin-top:10px
-}
-.hover-card .card-img-overlay {
-    background-color:rgba(0,0,0,.7);
-    opacity:0;
-    transition:opacity .3s ease-in-out
-}
-.hover-card:hover .card-img-overlay,.section.fade-in {
-    opacity:1
-}
-.card-title {
-    font-size:1.25rem;
-    font-weight:700;
-    color:#f89d53
-}
-.philheader {
-    font-weight:700;
-    font-size:2em;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    border-bottom:2px solid #333;
-    padding-bottom:10px;
-    margin-top:30px
-}
-.phil-btn,.phil-btn:hover {
-    border:2px solid #000;
-    color:#000
-}
-.philtext {
-    line-height:1.6;
-    font-size:1.3rem;
-    color:#333
-}
-.phil-btn {
-    transition:background-color .3s,color .3s
-}
-.phil-btn:hover {
-    background-color:#fff
-}
-.icon-grid i {
-    font-size:32px;
-    color:gray;
-    transition:transform .3s,background-color .3s,color .3s;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:60px;
-    height:60px;
-    border-radius:50%
-}
-.pie,h1.main {
-    color:#161616!important
-}
-.icon-grid i:hover {
-    background-color:orange;
-    color:#fff;
-    transform:scale(1.1)
-}
-.section5 {
-    padding:40px 20px;
-    background-color:#f9f9f9;
-    border-radius:10px;
-    margin:20px auto;
-    max-width:800px
-}
-#background-wrapper {
-    transition:background-color .5s
-}
-.section {
-    opacity:0;
-    transition:opacity .5s
-}
-.pie {
-    background-color:#ff8000;
-    padding:.5rem 1rem;
-    border-radius:5px;
-    border:2px solid #eed3bc;
-    margin-bottom:0
-}
-.cta-section,.pieNoMargin {
-    margin-top:0
-}
-.chart-container,.chart-container2,.chart-container3 {
-    width:80%;
-    margin:20px auto
-}
-.market-share-heading {
-    color:#fff;
-    margin-bottom:30px
-}
-.market-share-canvas {
-    max-width:100%;
-    height:auto
-}
-.chart-legend-text {
-    color:#000!important;
-    font-family:inherit;
-    font-size:18px!important;
-    font-weight:400!important
-}
-.list-group {
-    margin:0;
-    border:2px solid #eed3bc
-}
-.row-spacing,.testimonial-text {
-    margin-bottom:2rem
-}
-.list-alt,.list-group-item {
-    border:none;
-    background-color:#000;
-    color:#fff;
-    font-size:1.4rem;
-    line-height:1.5
-}
-.list-group-item:hover {
-    background:linear-gradient(90deg,#fa9c52,#ff8000,#fa9c52);
-    color:#000;
-    transition:.3s ease-in-out
-}
-.list-alt:hover {
-    background:linear-gradient(90deg,#fad7db,#fad7db);
-    color:#000;
-    transition:.3s ease-in-out;
-    cursor:pointer
-}
-.testimonial-section {
-    color:#000;
-    padding:4rem 2rem;
-    font-family:inherit;
-    width:100%;
-    position:relative;
-    border-top:4px solid #000
-}
-.testimonial-text {
-    font-size:1.5rem;
-    font-style:italic;
-    position:relative;
-    z-index:1
-}
-.testimonial-author {
-    font-weight:500;
-    font-size:1rem;
-    position:relative;
-    z-index:1
-}
-.large-quote {
-    font-size:8rem;
-    font-weight:700;
-    color:rgba(000,000,000,.2);
-    position:absolute;
-    z-index:0
-}
-.quote-open {
-    top:0;
-    left:5%
-}
-.quote-close {
-    bottom:0;
-    right:10%
-}
-.grecaptcha-badge {
-    visibility:hidden!important
-}
-h1.main {
-    font-size:5.2rem
-}
-.services {
-    border-bottom:4px solid #000
-}
-.service-card {
-    border:none;
-    border-radius:15px;
-    background-color:#fff;
-    box-shadow:0 6px 12px rgba(0,0,0,.15);
-    transition:transform .3s,box-shadow .3s;
-    overflow:hidden;
-    min-height:400px;
-    position:relative
-}
-.service-card:hover {
-    transform:translateY(-15px);
-    box-shadow:0 12px 24px rgba(0,0,0,.3)
-}
-.service-title {
-    color:#000;
-    font-weight:700;
-    font-size:1.5rem
-}
-.service-description {
-    font-size:1rem;
-    color:#555;
-    line-height:1.6
-}
-.card-body {
-    padding:2rem
-}
-.container {
-    margin-top:2rem
-}
-.service-card::before {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:5px;
-    background:linear-gradient(to right,#000,#333)
-}
-.icon {
-    font-size:2rem;
-    color:#555;
-    position:absolute;
-    bottom:1rem;
-    left:50%;
-    transform:translateX(-50%)
-}
-.icon:hover {
-    color:#f89d53;
-    transition:color .3s
-}
-.responsive-text {
-    font-size:2vw
-}
-.typey2 {
-    height:500px
-}
-@media (max-width:768px) {
-    .typey2 {
-        height:400px
-    }
-}
-@media (max-width:576px) {
-    .typey2 {
-        height:300px
-    }
-}
-.timeline-section {
-    width:100vw;
-    overflow-x:hidden;
-    background-color:#fff;
-    padding:3rem 0
-}
-.timeline-header {
-    font-size:2rem;
-    font-weight:700;
-    margin-bottom:3rem;
-    color:#c12a2a
-}
-.timeline-title-wrapper {
-    position:relative;
-    display:inline-block;
-    text-align:left;
-    opacity:0;
-    transform:translateX(-50px);
-    transition:.8s
-}
-.timeline-paragraph.animate,.timeline-title-wrapper.animate {
-    opacity:1;
-    transform:translateX(0)
-}
-.timeline-number {
-    font-size:8rem;
-    color:rgba(252,136,42,.2);
-    position:absolute;
-    top:50%;
-    right:-10px;
-    transform:translateY(-50%);
-    z-index:1;
-    pointer-events:none
-}
-.timeline-title {
-    font-size:1.5rem;
-    font-weight:700;
-    position:relative;
-    z-index:2;
-    margin:0;
-    color:#333
-}
-.timeline-paragraph {
-    opacity:0;
-    transform:translateX(50px);
-    transition:.8s
-}
-.timeline-icon {
-    opacity:0;
-    transform:translateY(20px);
-    transition:.8s;
-    font-size:4rem;
-    color:#d9534f;
-    margin:1rem 0
-}
-.timeline-icon.animate {
-    opacity:1;
-    transform:translateY(0)
-}
-.timeline-bottom {
-    margin-bottom:6rem!important
-}
-.timeline-line {
-    position:absolute;
-    top:120%;
-    left:50%;
-    width:2px;
-    height:250%;
-    background-color:#f89d53;
-    transform:translateX(-50%);
-    z-index:0;
-    pointer-events:none
-}
-@media (prefers-reduced-motion:reduce) {
-    .timeline-icon,.timeline-paragraph,.timeline-title-wrapper {
-        transform:none!important;
-        opacity:1!important;
-        transition:none!important
-    }
-}
-.seperator {
-    border-top:4px solid #000
-}
-.timeline-section {
-    margin-bottom:0
-}
-
-        .header-contact-hero {
-            color: #f89d53 !important;
-            background-color: #000 !important;
-            font-family: 'SUSE', serif;
-        }
-.footer {
-    padding: 20px;
-    border-top: 2px solid #000;
-    background-color: #f99d54;
-}
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-.footer-logo {
-    width: 100px;
-    margin-bottom: 10px;
-}
-.footer-email {
-    color: #000;
-    font-size: 18px;
-    margin: 5px 0;
-    font-weight: 700;
-}
-.footer-social {
-    margin: 10px 0;
-}
-.footer-social a {
-    color: #000;
-    font-size: 24px;
-    margin: 0 10px;
-}
-.footer-social a:hover {
-    color: #fff;
-}
-.footer-copyright {
-    color: #161616;
-    font-size: 16px;
-    margin-top: 10px;
-}
-.simple-audio-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px; /* Add spacing between elements */
-}
-
-.simple-audio-player button {
-    background: #000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.simple-audio-player button:hover {
-    background: #FFF;
-    color: #000;
-}
-.content-contact{
-background-image: linear-gradient(47deg, #ffffff 25%, #edebe7 25%, #edebe7 50%, #ffffff 50%, #ffffff 75%, #edebe7 75%, #edebe7 100%);
-background-size: 5.47px 5.87px;
-}
-.form-label-contact{
-    color:#000;
-    font-size: 1.3rem;
-}
-.form-check-input:checked {
-    background-color: #f89d53;
-    border-color: #f89d53;
-}
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="contact">
@@ -766,10 +34,10 @@ background-size: 5.47px 5.87px;
                         <a class="nav-link effect-2" href="services.html">Our Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link effect-2" href="#">Our Work</a>
+                        <a class="nav-link effect-2" href="work.html">Our Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link effect-2" href="#">About Us</a>
+                        <a class="nav-link effect-2" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link effect-2" href="contact.html">Contact</a>
@@ -780,17 +48,17 @@ background-size: 5.47px 5.87px;
         </div>
     </nav>
     <!-- Header Section -->
-<header class="bg-light py-5 text-center header-contact-hero">
-    <div class="container">
-        <div class="content_wrapper responsive-text" style="text-align: center;">
-            <h1 class="main responsive-text" style="color: #FFF!important; font-family: 'Special Elite', serif; font-size: 3rem; margin: 0; line-height: 1.2; height: 4.5rem; overflow: hidden;">
-                Shape the Future of Your Idea.
-            </h1>
+    <header class="bg-light py-5 text-center header-contact-hero">
+        <div class="container">
+            <div class="content_wrapper responsive-text" style="text-align: center;">
+                <h1 class="main responsive-text" style="color: #FFF!important; font-family: 'Special Elite', serif; font-size: 3rem; margin: 0; line-height: 1.2; height: 4.5rem; overflow: hidden;">
+                    Shape the Future of Your Idea.
+                </h1>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
     <!-- Contact Form Section -->
-    <section class="py-5 content-contact" >
+    <section class="py-5 content-contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -816,7 +84,7 @@ background-size: 5.47px 5.87px;
                         </div>
                         <p class="form-label-contact">I'm looking for:</p>
                         <div class="mb-3">
-                               <div class="form-check">
+                            <div class="form-check">
                                 <input type="checkbox" id="service_1" name="service[]" class="form-check-input" value="1">
                                 <label for="service_1" class="form-label-contactform-check-label">A New Website</label>
                             </div>
@@ -869,9 +137,9 @@ background-size: 5.47px 5.87px;
                         <div class="mb-3">
                             <label for="content" class="form-label-contact">What's on your mind?</label>
                             <textarea name="wkd_content" id="content" rows="5" class="form-control" required></textarea>
-                                        <p class="text-muted">This site is protected by reCAPTCHA. Google
-                <a href="https://policies.google.com/privacy" class="text-muted">Privacy Policys</a> and
-                <a href="https://policies.google.com/terms" class="text-muted">Terms of Service</a> apply.</p>
+                            <p class="text-muted">This site is protected by reCAPTCHA. Google
+                                <a href="https://policies.google.com/privacy" class="text-muted">Privacy Policys</a> and
+                                <a href="https://policies.google.com/terms" class="text-muted">Terms of Service</a> apply.</p>
                         </div>
                         <button type="submit" class="btn contact-btn w-100">Lick that stamp and send it!</button>
                     </form>
@@ -900,108 +168,110 @@ background-size: 5.47px 5.87px;
             </div>
             <div class="simple-audio-player">
                 <p class="footer-copyright">What is a Raincry? Have a listen
-                <audio id="audio" src="audio/raincry.mp3"></audio>
-                <button id="play-button">Play</button></p>
+                    <audio id="audio" src="audio/raincry.mp3"></audio>
+                    <button id="play-button">Play</button></p>
             </div>
-            <p class="footer-copyright">&copy; 1995-<script>document.write(new Date().getFullYear());</script>, Raincry Development, LLC.</p>
+            <p class="footer-copyright">&copy; 1995-<script>
+                document.write(new Date().getFullYear());
+                </script>, Raincry Development, LLC.</p>
         </div>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <!--TYPEWRITER EFFECT -->
+    <!--TYPEWRITER EFFECT -->
     <script>
     document.addEventListener('DOMContentLoaded', function(event) {
-    var dataText = ["Shape the Future of Your Idea.", "Ready to Launch Your Big Idea? We’ve Got You Covered!", "Elevate Your Idea From Concept to Creation.","From Idea to Execution Let’s Begin the Journey!", "Shape the Future of Your Idea.", "The First Step to Greatness Starts With You.", "Shape the Future of Your Idea."];
+        var dataText = ["Shape the Future of Your Idea.", "Ready to Launch Your Big Idea? We’ve Got You Covered!", "Elevate Your Idea From Concept to Creation.", "From Idea to Execution Let’s Begin the Journey!", "Shape the Future of Your Idea.", "The First Step to Greatness Starts With You.", "Shape the Future of Your Idea."];
 
-    function typeWriter(text, i, fnCallback) {
-        if (i < text.length) {
-            document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span class="typey" aria-hidden="true"></span>';
-            setTimeout(function() {
-                typeWriter(text, i + 1, fnCallback);
-            }, 100);
-        } else if (typeof fnCallback === 'function') {
-            setTimeout(fnCallback, 1500); // Pause before starting backspace
+        function typeWriter(text, i, fnCallback) {
+            if (i < text.length) {
+                document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span class="typey" aria-hidden="true"></span>';
+                setTimeout(function() {
+                    typeWriter(text, i + 1, fnCallback);
+                }, 100);
+            } else if (typeof fnCallback === 'function') {
+                setTimeout(fnCallback, 1500); // Pause before starting backspace
+            }
         }
-    }
 
-    function backspace(text, i, fnCallback) {
-        if (i >= 0) {
-            document.querySelector("h1").innerHTML = text.substring(0, i) + '<span class="typey3" aria-hidden="true"></span>';
-            setTimeout(function() {
-                backspace(text, i - 1, fnCallback);
-            }, 50);
-        } else if (typeof fnCallback === 'function') {
-            setTimeout(fnCallback, 600); // Pause before starting the next line
+        function backspace(text, i, fnCallback) {
+            if (i >= 0) {
+                document.querySelector("h1").innerHTML = text.substring(0, i) + '<span class="typey3" aria-hidden="true"></span>';
+                setTimeout(function() {
+                    backspace(text, i - 1, fnCallback);
+                }, 50);
+            } else if (typeof fnCallback === 'function') {
+                setTimeout(fnCallback, 600); // Pause before starting the next line
+            }
         }
-    }
 
-    function StartTextAnimation(i) {
-        if (i < dataText.length) {
-            typeWriter(dataText[i], 0, function() {
-                backspace(dataText[i], dataText[i].length - 1, function() {
-                    StartTextAnimation(i + 1);
+        function StartTextAnimation(i) {
+            if (i < dataText.length) {
+                typeWriter(dataText[i], 0, function() {
+                    backspace(dataText[i], dataText[i].length - 1, function() {
+                        StartTextAnimation(i + 1);
+                    });
                 });
-            });
-        } else {
-            setTimeout(function() {
-                StartTextAnimation(0); // Restart the animation loop
-            }, 1000); // Pause briefly before restarting
+            } else {
+                setTimeout(function() {
+                    StartTextAnimation(0); // Restart the animation loop
+                }, 1000); // Pause briefly before restarting
+            }
         }
-    }
 
-    // Start the text animation on page load
-    StartTextAnimation(0);
-});
-</script>
-<!-- MORE TYPE -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const messages = [
-        "Elevate Your Idea From Concept to Creation.",
-        "Ready to Launch Your Big Idea? We’ve Got You Covered!",
-        "From Idea to Execution Let’s Begin the Journey!",
-        "Shape the Future of Your Idea.",
-        "The First Step to Greatness Starts With You.",
-        "Let's Get Started On Your Next Big Idea!"
-    ];
-
-    // Create a temporary element to calculate the tallest message
-    const tempElement = document.createElement('div');
-    tempElement.style.position = 'absolute';
-    tempElement.style.visibility = 'hidden';
-    tempElement.style.fontSize = '3rem';
-    tempElement.style.lineHeight = '1.2';
-    tempElement.style.fontFamily = "'Special Elite', serif";
-    document.body.appendChild(tempElement);
-
-    let maxHeight = 0;
-    messages.forEach(message => {
-        tempElement.innerText = message;
-        maxHeight = Math.max(maxHeight, tempElement.offsetHeight);
+        // Start the text animation on page load
+        StartTextAnimation(0);
     });
+    </script>
+    <!-- MORE TYPE -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const messages = [
+            "Elevate Your Idea From Concept to Creation.",
+            "Ready to Launch Your Big Idea? We’ve Got You Covered!",
+            "From Idea to Execution Let’s Begin the Journey!",
+            "Shape the Future of Your Idea.",
+            "The First Step to Greatness Starts With You.",
+            "Let's Get Started On Your Next Big Idea!"
+        ];
 
-    // Set the max height to the h1
-    const header = document.querySelector('h1.main');
-    header.style.height = `${maxHeight}px`;
+        // Create a temporary element to calculate the tallest message
+        const tempElement = document.createElement('div');
+        tempElement.style.position = 'absolute';
+        tempElement.style.visibility = 'hidden';
+        tempElement.style.fontSize = '3rem';
+        tempElement.style.lineHeight = '1.2';
+        tempElement.style.fontFamily = "'Special Elite', serif";
+        document.body.appendChild(tempElement);
 
-    // Cleanup
-    document.body.removeChild(tempElement);
-});
-</script>
-<script>
+        let maxHeight = 0;
+        messages.forEach(message => {
+            tempElement.innerText = message;
+            maxHeight = Math.max(maxHeight, tempElement.offsetHeight);
+        });
+
+        // Set the max height to the h1
+        const header = document.querySelector('h1.main');
+        header.style.height = `${maxHeight}px`;
+
+        // Cleanup
+        document.body.removeChild(tempElement);
+    });
+    </script>
+    <script>
     const audio = document.getElementById('audio');
-const playButton = document.getElementById('play-button');
+    const playButton = document.getElementById('play-button');
 
-playButton.addEventListener('click', () => {
-    if (audio.paused) {
-        audio.play();
-        playButton.textContent = 'Pause';
-    } else {
-        audio.pause();
-        playButton.textContent = 'Play';
-    }
-});
-</script>
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playButton.textContent = 'Pause';
+        } else {
+            audio.pause();
+            playButton.textContent = 'Play';
+        }
+    });
+    </script>
 </body>
 
 </html>
