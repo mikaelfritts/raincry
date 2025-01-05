@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="canonical" href="https://raincry.dev/work.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/site.webmanifest">
+    <style>
+    body {
+        background-color: #f8f9fa;
+        color: #343a40;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .countdown {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/raincryLogo300.png" alt="Logo" class="mb-4">
+        <h1 class="display-4">We're Coming Soon!</h1>
+        <p class="lead">This page is under construction. Stay tuned for something amazing!</p>
+        <div id="countdown" class="countdown">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Countdown Timer Script
+    const targetDate = new Date("2025-01-15T00:00:00").getTime();
+
+    const countdown = () => {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        if (timeLeft < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerText = "We're Live!";
+        }
+    };
+
+    const timer = setInterval(countdown, 1000);
+    </script>
+</body>
+
+</html>

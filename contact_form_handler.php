@@ -1,29 +1,39 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    // Sanitize and validate input
+    $name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING));
+    $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
+    $message = htmlspecialchars(trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING)));
 
+    // Check for empty fields
     if (empty($name) || empty($email) || empty($message)) {
         echo 'All fields are required.';
         exit;
     }
 
+    // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo 'Invalid email address.';
         exit;
     }
 
-    $to = 'recipient@example.com'; // Replace with your email address
+    // Prepare email details
+    $to = 'hello@raincry.dev'; // Replace with your email address
     $subject = "New Contact Form Submission";
-    $body = "You have received a new message from the contact form:\n\n" .
-            "Name: $name\n" .
-            "Email: $email\n\n" .
-            "Message:\n$message\n";
-    $headers = "From: $email\r\n" .
-               "Reply-To: $email\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+    $body = nl2br(
+        "You have received a new message from the contact form:\n\n" .
+        "Name: " . htmlspecialchars($name) . "\n" .
+        "Email: " . htmlspecialchars($email) . "\n\n" .
+        "Message:\n" . htmlspecialchars($message) . "\n"
+    );
 
+    // Set email headers
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: noreply@raincry.dev\r\n"; // Use a fixed email address
+    $headers .= "Reply-To: $email\r\n";
+
+    // Send the email
     if (mail($to, $subject, $body, $headers)) {
         header("Location: success.html"); // Redirect to success page
         exit;
@@ -33,3 +43,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo 'Invalid request method.';
 }
+?>
